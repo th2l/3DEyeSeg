@@ -1,0 +1,4 @@
+# @package _global_
+hydra:
+    run:
+        dir: /mnt/Work/OneDrive_backup_data/OpenEDS2021_EyeSeg3D/outputs/${job_name}/${job_name}-${model_name}-${now:%Y%m%d_%H%M%S}

@@ -1,0 +1,23 @@
+# @package data
+class: openeds2021.OpenEDS3DDataset
+dataset_name: "openeds2021"
+task: segmentation
+class_weight_method: "sqrt"
+dataroot: data
+first_subsampling: 0.1
+process_workers: 8
+apply_rotation: True
+mode: "last"
+use_category: False # Use object category information
+train_transform:
+  - transform: SaveOriginalPosId
+  - transform: RandomRotate
+    params:
+      degrees: 180
+      axis: 2
+  - transform: RandomScaleAnisotropic
+    params:
+      scales: [0.9, 1.1]
+val_transform:
+  - transform: SaveOriginalPosId
+test_transform: ${data.val_transform}

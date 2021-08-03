@@ -1,0 +1,3 @@
+class: CosineAnnealingLR
+params: 
+  T_max: 10
