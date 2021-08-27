@@ -1,5 +1,5 @@
 
-## 3D Eye Point Cloud Segmentation Challenge - OpenEDS 2021
+## :2nd_place_medal: 3D Eye Point Cloud Segmentation Challenge - OpenEDS 2021
 
 Information about 3D Eye Point Cloud Segmentation can be found in [here](https://research.fb.com/programs/facebook-openeds-2021-challenge/).
 
