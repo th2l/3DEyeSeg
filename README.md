@@ -25,4 +25,4 @@ Information about 3D Eye Point Cloud Segmentation can be found in [here](https:/
 The predictions for test set will be saved to `ckpt/eval/%Y-%m-%d_%H-%M-%S/viz/100/test`.
 
 ### Credits
-Our source code is built upon [torch-points3d](https://github.com/nicolas-chaulet/torch-points3d) library.
+Our source code is built upon on [torch-points3d](https://github.com/nicolas-chaulet/torch-points3d) library.
