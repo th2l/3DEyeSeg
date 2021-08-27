@@ -1,3 +1,10 @@
+import os
+import random
+import numpy as np
+import torch
+
+os.environ['OMP_NUM_THREADS'] = '8'
+
 import hydra
 from hydra.core.global_hydra import GlobalHydra
 from omegaconf import OmegaConf
@@ -9,6 +16,8 @@ def main(cfg):
     OmegaConf.set_struct(cfg, False)  # This allows getattr and hasattr methods to function correctly
     if cfg.pretty_print:
         print(OmegaConf.to_yaml(cfg))
+
+    # torch.use_deterministic_algorithms(True)
 
     trainer = Eye3DTrainer(cfg)
     trainer.eval()

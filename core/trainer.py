@@ -103,6 +103,7 @@ class Eye3DTrainer(Trainer):
         # Verify attributes in dataset
         self._model.verify_data(self._dataset.train_dataset[0])
 
+        print('Use Tensorboard: ', self.tensorboard_log)
         # Choose selection stage
         selection_stage = getattr(self._cfg, "selection_stage", "")
         self._checkpoint.selection_stage = self._dataset.resolve_saving_stage(selection_stage)
@@ -162,3 +163,14 @@ class Eye3DTrainer(Trainer):
 
             self._finalize_epoch(epoch)
             self._tracker.print_summary()
+
+    @property
+    def has_tensorboard(self):
+        return getattr(self._cfg.training, "tensorboard", False)
+
+    @property
+    def tensorboard_log(self):
+        if self.has_tensorboard:
+            return getattr(self._cfg.training.tensorboard, "log", False)
+        else:
+            return False
