@@ -11,7 +11,7 @@ Information about 3D Eye Point Cloud Segmentation can be found in [here](https:/
       - Run `python eval.py`
 
 2. Use docker (the method that we used)
-    - Create docker image with dockerfile, for example docker docker build -t prj:eyeseg3d .
+    - Create docker image with dockerfile, for example ```docker build -t prj:eyeseg3d .```
     - Run
  ```
  docker run --gpus all --ipc=host -it --rm \
